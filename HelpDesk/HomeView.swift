@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var sessionManager = SessionManager.shared
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         if sessionManager.userDataLoaded {
@@ -17,13 +18,26 @@ struct HomeView: View {
                 Text("Email: \(sessionManager.currentUser?.email ?? "Email não disponível")")
                 Text("Permissão: \(sessionManager.currentUser?.permissao ?? "Permissão não disponível")")
                 Text("UID: \(sessionManager.currentUser?.uid ?? "UID não disponível")")
+                
+                
+                Button("Sair"){
+                    logOut()
+                }
+                .foregroundColor(.red)
+                .padding()
             }
         } else {
             ProgressView()
+                .padding()
             Text("Carregando dados do usuário...")
                 .font(.callout)
             
         }
+    }
+    
+    private func logOut() {
+            sessionManager.signOut()
+            presentationMode.wrappedValue.dismiss()
     }
 }
 

@@ -65,4 +65,13 @@ class SessionManager: ObservableObject {
             }
         }
     }
+    
+    func signOut() {
+            do {
+                try Auth.auth().signOut()
+                currentUser = nil
+            } catch {
+                print("Erro ao fazer logoff: \(error.localizedDescription)")
+            }
+        }
 }

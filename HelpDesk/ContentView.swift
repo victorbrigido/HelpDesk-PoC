@@ -17,34 +17,44 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            if isLoggedIn {
+                HomeView()
+            } else {
+                loginView
+            }
+        }
+        .onReceive(sessionManager.$currentUser) { currentUser in
+            isLoggedIn = currentUser != nil
+        }
+    }
+    
+    var loginView: some View {
+        VStack {
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             SecureField("Senha", text: $password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.top, 4)
-        }
-        .padding()
-        .fullScreenCover(isPresented: $isLoggedIn, content: {
-            HomeView()
-        })
-        
-        if !errorMessage.isEmpty {
-            Text(errorMessage)
-                .font(.callout)
-                .foregroundColor(.red)
-                .padding(.top, 4)
-        }
-        
-        Button(action: {
-            signIn()
-        }) {
-            Text("Entrar")
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue)
-                .cornerRadius(10)
+            
+            if !errorMessage.isEmpty {
+                Text(errorMessage)
+                    .font(.callout)
+                    .foregroundColor(.red)
+                    .padding(.top, 4)
+            }
+            
+            Button(action: {
+                signIn()
+            }) {
+                Text("Entrar")
+                    .foregroundColor(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }
+            .padding(.top)
         }
         .padding()
     }
@@ -56,10 +66,12 @@ struct ContentView: View {
                 print(errorMessage)
             } else {
                 if let user = authResult?.user {
-                    sessionManager.fetchUserData(uid: user.uid)
-                    DispatchQueue.main.async {
-                        isLoggedIn = true
-                    }
+                    sessionManager.signIn(withUser: User(uid: user.uid,
+                                                         nome: "",
+                                                         email: "",
+                                                         permissao: ""
+                    ))
+                    isLoggedIn = true
                     print("Usuário logado: \(user.uid)")
                 }
             }
