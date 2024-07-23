@@ -32,10 +32,12 @@ struct ContentView: View {
         VStack {
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .accessibilityLabel(Text("Email"))
             
             SecureField("Senha", text: $password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.top, 4)
+                .accessibilityLabel(Text("Senha"))
             
             if !errorMessage.isEmpty {
                 Text(errorMessage)
@@ -54,6 +56,7 @@ struct ContentView: View {
                     .background(Color.blue)
                     .cornerRadius(10)
             }
+            .accessibilityLabel(Text("Entrar"))
             .padding(.top)
         }
         .padding()
