@@ -20,6 +20,7 @@
 		164DE3102C49DF6400F8CBB9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DE30F2C49DF6400F8CBB9 /* HomeView.swift */; };
 		164DE3132C49DFEA00F8CBB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DE3122C49DFEA00F8CBB9 /* User.swift */; };
 		164DE3162C49E3A000F8CBB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DE3152C49E3A000F8CBB9 /* AppDelegate.swift */; };
+		165412E82C5057EF00512C4F /* AccessibleContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165412E72C5057EF00512C4F /* AccessibleContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		164DE30F2C49DF6400F8CBB9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		164DE3122C49DFEA00F8CBB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		164DE3152C49E3A000F8CBB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		165412E72C5057EF00512C4F /* AccessibleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				1624D2792C4ACC0000D3A74F /* GoogleService-Info.plist */,
 				164DE2F82C49CBF200F8CBB9 /* Assets.xcassets */,
 				164DE2FA2C49CBF200F8CBB9 /* Preview Content */,
+				165412E72C5057EF00512C4F /* AccessibleContentView.swift */,
 			);
 			path = HelpDesk;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165412E82C5057EF00512C4F /* AccessibleContentView.swift in Sources */,
 				164DE3132C49DFEA00F8CBB9 /* User.swift in Sources */,
 				164DE3102C49DF6400F8CBB9 /* HomeView.swift in Sources */,
 				164DE2F72C49CBF200F8CBB9 /* ContentView.swift in Sources */,

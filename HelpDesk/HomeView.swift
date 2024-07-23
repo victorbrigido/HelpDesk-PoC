@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var sessionManager = SessionManager.shared
     @Environment(\.presentationMode) var presentationMode
+    @State private var isShowingAcessibleView = false
     
     var body: some View {
         if sessionManager.userDataLoaded {
@@ -25,7 +26,16 @@ struct HomeView: View {
                 }
                 .foregroundColor(.red)
                 .padding()
+                
+                Button("AccessibleView"){
+                    isShowingAcessibleView = true
+                }
+                .foregroundColor(.red)
+                .padding()
             }
+            .fullScreenCover(isPresented: $isShowingAcessibleView, content: {
+                AccessibleContentView()
+            })
         } else {
             ProgressView()
                 .padding()
