@@ -19,6 +19,7 @@ struct AccessibleContentView: View {
                     .padding()
                     .background(useAccessibleColors ? ColorPalette.highContrastBlue : Color.blue)
                     .cornerRadius(8)
+                    .accessibilityLabel(Text("Toggle modo daltonico. Atualmente o modo é \(useAccessibleColors ? "Ligado" : "Desligado")."))
             }
             .padding()
             .toggleStyle(SwitchToggleStyle(tint: .accentColor))
