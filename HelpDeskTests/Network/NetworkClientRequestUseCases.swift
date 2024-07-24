@@ -11,13 +11,7 @@ import XCTest
 final class NetworkClientRequestUseCases: XCTestCase {
 
     func test_request_resume_dataTask_with_url() {
-        let (sut, session) = makeSUT()
-        let url = URL(string: "https://localhost:3000/")!
-        let task = URLSessionDataTaskSpy()
-        
-        session.stub(url: url, task: task)
-        sut.request(from: url) { _ in }
-        
+        let task = assert()
         XCTAssertEqual(task.resumeCount, 1)
     }
     
@@ -27,6 +21,15 @@ final class NetworkClientRequestUseCases: XCTestCase {
         return (sut, session)
     }
 
+    private func assert() -> URLSessionDataTaskSpy {
+        let (sut, session) = makeSUT()
+        let url = URL(string: "https://localhost:3000/")!
+        let task = URLSessionDataTaskSpy()
+        session.stub(url: url, task: task)
+        sut.request(from: url) { _ in }
+        
+        return task
+    }
 }
 
 final class URLSessionSpy: URLSession {
