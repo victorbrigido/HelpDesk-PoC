@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1624D27A2C4ACC0000D3A74F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1624D2792C4ACC0000D3A74F /* GoogleService-Info.plist */; };
 		164DE2F52C49CBF200F8CBB9 /* HelpDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DE2F42C49CBF200F8CBB9 /* HelpDeskApp.swift */; };
 		164DE2F72C49CBF200F8CBB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DE2F62C49CBF200F8CBB9 /* ContentView.swift */; };
 		164DE2F92C49CBF200F8CBB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 164DE2F82C49CBF200F8CBB9 /* Assets.xcassets */; };
@@ -20,10 +19,23 @@
 		164DE3102C49DF6400F8CBB9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DE30F2C49DF6400F8CBB9 /* HomeView.swift */; };
 		164DE3132C49DFEA00F8CBB9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DE3122C49DFEA00F8CBB9 /* User.swift */; };
 		164DE3162C49E3A000F8CBB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164DE3152C49E3A000F8CBB9 /* AppDelegate.swift */; };
+		7A41DD682C505F6D00EA7742 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A41DD672C505F6D00EA7742 /* NetworkClient.swift */; };
+		7A41DD6A2C50606B00EA7742 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A41DD692C50606B00EA7742 /* GoogleService-Info.plist */; };
+		7A41DD782C51AC9400EA7742 /* HelpDeskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A41DD772C51AC9400EA7742 /* HelpDeskTests.swift */; };
+		7A41DD802C51ACB100EA7742 /* NetworkClientRequestUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A41DD7F2C51ACB100EA7742 /* NetworkClientRequestUseCases.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7A41DD792C51AC9400EA7742 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 164DE2E92C49CBF200F8CBB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 164DE2F02C49CBF200F8CBB9;
+			remoteInfo = HelpDesk;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1624D2792C4ACC0000D3A74F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		164DE2F12C49CBF200F8CBB9 /* HelpDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		164DE2F42C49CBF200F8CBB9 /* HelpDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskApp.swift; sourceTree = "<group>"; };
 		164DE2F62C49CBF200F8CBB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +44,11 @@
 		164DE30F2C49DF6400F8CBB9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		164DE3122C49DFEA00F8CBB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		164DE3152C49E3A000F8CBB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7A41DD672C505F6D00EA7742 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		7A41DD692C50606B00EA7742 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A41DD752C51AC9400EA7742 /* HelpDeskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelpDeskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A41DD772C51AC9400EA7742 /* HelpDeskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskTests.swift; sourceTree = "<group>"; };
+		7A41DD7F2C51ACB100EA7742 /* NetworkClientRequestUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientRequestUseCases.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A41DD722C51AC9400EA7742 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				164DE2F32C49CBF200F8CBB9 /* HelpDesk */,
+				7A41DD762C51AC9400EA7742 /* HelpDeskTests */,
 				164DE2F22C49CBF200F8CBB9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				164DE2F12C49CBF200F8CBB9 /* HelpDesk.app */,
+				7A41DD752C51AC9400EA7742 /* HelpDeskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,13 +95,14 @@
 		164DE2F32C49CBF200F8CBB9 /* HelpDesk */ = {
 			isa = PBXGroup;
 			children = (
+				7A41DD662C505F5900EA7742 /* HelpAPI */,
 				164DE3142C49E38E00F8CBB9 /* Application */,
 				164DE3112C49DFD800F8CBB9 /* Manager */,
 				164DE2F42C49CBF200F8CBB9 /* HelpDeskApp.swift */,
 				164DE2F62C49CBF200F8CBB9 /* ContentView.swift */,
 				164DE30F2C49DF6400F8CBB9 /* HomeView.swift */,
-				1624D2792C4ACC0000D3A74F /* GoogleService-Info.plist */,
 				164DE2F82C49CBF200F8CBB9 /* Assets.xcassets */,
+				7A41DD692C50606B00EA7742 /* GoogleService-Info.plist */,
 				164DE2FA2C49CBF200F8CBB9 /* Preview Content */,
 			);
 			path = HelpDesk;
@@ -105,6 +132,31 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		7A41DD662C505F5900EA7742 /* HelpAPI */ = {
+			isa = PBXGroup;
+			children = (
+				7A41DD672C505F6D00EA7742 /* NetworkClient.swift */,
+			);
+			path = HelpAPI;
+			sourceTree = "<group>";
+		};
+		7A41DD762C51AC9400EA7742 /* HelpDeskTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A41DD7E2C51ACA600EA7742 /* Network */,
+				7A41DD772C51AC9400EA7742 /* HelpDeskTests.swift */,
+			);
+			path = HelpDeskTests;
+			sourceTree = "<group>";
+		};
+		7A41DD7E2C51ACA600EA7742 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7A41DD7F2C51ACB100EA7742 /* NetworkClientRequestUseCases.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,6 +184,24 @@
 			productReference = 164DE2F12C49CBF200F8CBB9 /* HelpDesk.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7A41DD742C51AC9400EA7742 /* HelpDeskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A41DD7B2C51AC9400EA7742 /* Build configuration list for PBXNativeTarget "HelpDeskTests" */;
+			buildPhases = (
+				7A41DD712C51AC9400EA7742 /* Sources */,
+				7A41DD722C51AC9400EA7742 /* Frameworks */,
+				7A41DD732C51AC9400EA7742 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A41DD7A2C51AC9400EA7742 /* PBXTargetDependency */,
+			);
+			name = HelpDeskTests;
+			productName = HelpDeskTests;
+			productReference = 7A41DD752C51AC9400EA7742 /* HelpDeskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -144,6 +214,10 @@
 				TargetAttributes = {
 					164DE2F02C49CBF200F8CBB9 = {
 						CreatedOnToolsVersion = 15.4;
+					};
+					7A41DD742C51AC9400EA7742 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 164DE2F02C49CBF200F8CBB9;
 					};
 				};
 			};
@@ -164,6 +238,7 @@
 			projectRoot = "";
 			targets = (
 				164DE2F02C49CBF200F8CBB9 /* HelpDesk */,
+				7A41DD742C51AC9400EA7742 /* HelpDeskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -175,7 +250,14 @@
 			files = (
 				164DE2FC2C49CBF200F8CBB9 /* Preview Assets.xcassets in Resources */,
 				164DE2F92C49CBF200F8CBB9 /* Assets.xcassets in Resources */,
-				1624D27A2C4ACC0000D3A74F /* GoogleService-Info.plist in Resources */,
+				7A41DD6A2C50606B00EA7742 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A41DD732C51AC9400EA7742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,13 +270,31 @@
 			files = (
 				164DE3132C49DFEA00F8CBB9 /* User.swift in Sources */,
 				164DE3102C49DF6400F8CBB9 /* HomeView.swift in Sources */,
+				7A41DD682C505F6D00EA7742 /* NetworkClient.swift in Sources */,
 				164DE2F72C49CBF200F8CBB9 /* ContentView.swift in Sources */,
 				164DE3162C49E3A000F8CBB9 /* AppDelegate.swift in Sources */,
 				164DE2F52C49CBF200F8CBB9 /* HelpDeskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A41DD712C51AC9400EA7742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A41DD782C51AC9400EA7742 /* HelpDeskTests.swift in Sources */,
+				7A41DD802C51ACB100EA7742 /* NetworkClientRequestUseCases.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A41DD7A2C51AC9400EA7742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 164DE2F02C49CBF200F8CBB9 /* HelpDesk */;
+			targetProxy = 7A41DD792C51AC9400EA7742 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		164DE2FD2C49CBF200F8CBB9 /* Debug */ = {
@@ -372,6 +472,40 @@
 			};
 			name = Release;
 		};
+		7A41DD7C2C51AC9400EA7742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.puc122.HelpDeskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelpDesk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HelpDesk";
+			};
+			name = Debug;
+		};
+		7A41DD7D2C51AC9400EA7742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.puc122.HelpDeskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HelpDesk.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HelpDesk";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -389,6 +523,15 @@
 			buildConfigurations = (
 				164DE3002C49CBF200F8CBB9 /* Debug */,
 				164DE3012C49CBF200F8CBB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A41DD7B2C51AC9400EA7742 /* Build configuration list for PBXNativeTarget "HelpDeskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A41DD7C2C51AC9400EA7742 /* Debug */,
+				7A41DD7D2C51AC9400EA7742 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
