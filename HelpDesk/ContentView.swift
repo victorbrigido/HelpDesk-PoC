@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Firebase
+import UIKit
 
 struct ContentView: View {
     @StateObject var sessionManager = SessionManager.shared
@@ -65,6 +66,8 @@ struct ContentView: View {
     private func signIn() {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             if let error = error {
+                let notificationFeedback = UINotificationFeedbackGenerator()
+                notificationFeedback.notificationOccurred(.error) // feedback tátil pro erro no login
                 errorMessage = error.localizedDescription
                 print(errorMessage)
             } else {

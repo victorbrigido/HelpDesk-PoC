@@ -34,6 +34,7 @@
 		164DE3122C49DFEA00F8CBB9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		164DE3152C49E3A000F8CBB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		165412E72C5057EF00512C4F /* AccessibleContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleContentView.swift; sourceTree = "<group>"; };
+		165412E92C51C25600512C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 		164DE2F32C49CBF200F8CBB9 /* HelpDesk */ = {
 			isa = PBXGroup;
 			children = (
+				165412E92C51C25600512C4F /* Info.plist */,
 				164DE3142C49E38E00F8CBB9 /* Application */,
 				164DE3112C49DFD800F8CBB9 /* Manager */,
 				164DE2F42C49CBF200F8CBB9 /* HelpDeskApp.swift */,
@@ -330,6 +332,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HelpDesk/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HelpDesk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -358,6 +361,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"HelpDesk/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HelpDesk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
