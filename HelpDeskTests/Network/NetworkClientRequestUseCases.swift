@@ -11,8 +11,7 @@ import XCTest
 final class NetworkClientRequestUseCases: XCTestCase {
 
     func test_request_resume_dataTask_with_url() {
-        let session = URLSessionSpy()
-        let sut = NetworkService(session: session)
+        let (sut, session) = makeSUT()
         let url = URL(string: "https://localhost:3000/")!
         let task = URLSessionDataTaskSpy()
         
@@ -20,6 +19,12 @@ final class NetworkClientRequestUseCases: XCTestCase {
         sut.request(from: url) { _ in }
         
         XCTAssertEqual(task.resumeCount, 1)
+    }
+    
+    private func makeSUT() -> (NetworkService, URLSessionSpy) {
+        let session = URLSessionSpy()
+        let sut = NetworkService(session: session)
+        return (sut, session)
     }
 
 }
