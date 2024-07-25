@@ -33,6 +33,7 @@ struct ContentView: View {
         VStack {
             TextField("Email", text: $email)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
+                .autocapitalization(.none)
                 .accessibilityLabel(Text("Email"))
             
             SecureField("Senha", text: $password)
@@ -77,6 +78,8 @@ struct ContentView: View {
                                                          email: "",
                                                          permissao: ""
                     ))
+                    let notificationFeedback = UINotificationFeedbackGenerator()
+                    notificationFeedback.notificationOccurred(.success)
                     isLoggedIn = true
                     print("Usuário logado: \(user.uid)")
                 }
